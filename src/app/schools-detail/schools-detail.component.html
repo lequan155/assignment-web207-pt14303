@@ -1,0 +1,24 @@
+<hr>
+<div class="row" *ngIf="schoolData != null">
+      <div class="col-lg-7">
+        <h2>{{schoolData.name}}</h2>
+        <p>Thông tin về trường {{schoolData.name}}:</p>
+        <ul>
+          <li>
+            <strong>Hiệu trưởng: {{schoolData.principal}}</strong>
+          </li>
+          <li>Địa chỉ: {{schoolData.address}}</li>
+          <li>Thành phố: {{schoolData.province}}</li>
+        </ul>
+
+        <a [routerLink]="['../../edit-school',schoolData.id]" class="btn btn-primary">Sửa thông tin</a> &nbsp;
+            <button class="btn btn-danger" (click)="removeSchool()">Xoá</button>
+      </div>
+      <div class="col-lg-6">
+        <img [src] = "schoolData.logo" width="400" alt="...">
+      </div>
+</div>
+<br>
+<app-classes-list></app-classes-list>
+<hr>
+<br>

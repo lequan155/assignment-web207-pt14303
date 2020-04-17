@@ -1,0 +1,38 @@
+<hr>
+<div  class="container">
+<form class="form-horizontal" [formGroup]="formSchool">
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Tên trường:&nbsp;</label>
+    <input class="form-control" type="text" formControlName='name'>
+    <br>
+    
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Hình ảnh:&nbsp;</label>
+    <input class="form-control" type="text" formControlName='logo'>
+    <br>
+    
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Địa chỉ:&nbsp;</label>
+    <input class="form-control" type="text" formControlName='address'>
+    <br>
+    
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Hiệu trưởng:&nbsp;</label>
+    <input class="form-control" type="text" formControlName='principal'>
+    <br>
+    
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Thành phố:&nbsp;</label>
+    <input class="form-control" type="text" formControlName='province'>
+    <br>
+    
+  </div>
+  <button class="btn btn-primary" (click)="saveSchool()">Save</button>&nbsp;
+  <button class="btn btn-secondary" (click)="formSchool.reset()">New</button>
+</form>
+</div>
+<hr>

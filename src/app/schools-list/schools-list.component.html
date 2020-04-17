@@ -1,0 +1,15 @@
+<h1 class="my-4">Danh sách trường học</h1>
+<div *ngFor="let school of schools">
+        <div class="card h-100">
+          <h4 class="card-header"><a [routerLink]="['school-detail',school.id]">{{school.name}}</a></h4>
+          <div class="card-body">
+            <img [src] = "school.logo" width="400" height="300" alt="...">
+            <h4>{{school.address}}, {{school.province}}</h4>
+          </div>
+          <div class="card-footer">
+            <a [routerLink]="['school-detail',school.id]" class="btn btn-primary">Chi tiết</a>
+          </div>
+        
+        </div>
+        <br>
+</div>

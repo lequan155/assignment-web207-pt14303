@@ -1,0 +1,9 @@
+<hr>
+<div class="container" *ngIf="classData != null">
+<h2>Lớp: {{classData.name}}</h2>
+<h3>Phòng: {{classData.room_number}}</h3>
+<h3>Giáo viên phụ trách: {{classData.main_teacher}}</h3>
+<h3>Số SV: {{classData.total_students}}</h3>
+<a class="btn btn-primary" [routerLink]="['../../edit-class',classData.id]">Sửa</a>&nbsp;
+<button class="btn btn-danger" (click)="removeClass()">Xoá</button>
+</div>

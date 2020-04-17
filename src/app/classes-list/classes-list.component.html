@@ -1,0 +1,17 @@
+<div *ngFor="let class of classes">
+        <div class="card h-100">
+          <h4 class="card-header"><a [routerLink]="['class-detail',class.id]">Lớp {{class.name}}</a></h4>
+          <div class="card-body">
+            
+            <h4>GVCN: {{class.main_teacher}}</h4>
+            <h5>Số SV: {{class.total_students}}</h5>
+          </div>
+          <div class="card-footer">
+            <a [routerLink]="['class-detail',class.id]" class="btn btn-primary">Chi tiết</a>
+          </div>
+        
+        </div>
+        <br>
+</div>
+
+<a routerLink="add-class">Thêm lớp</a>

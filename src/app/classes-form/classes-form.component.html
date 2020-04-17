@@ -1,0 +1,32 @@
+<hr>
+<div  class="container">
+<form class="form-horizontal" [formGroup]="formClass">
+  <div class="form-group">
+    <label class="col-sm-3 control-label" for="">Tên lớp:</label>
+    <input class="form-control" type="text" formControlName='name'>
+    <br>
+    
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label" for="">Phòng học:</label>
+    <input class="form-control" type="number" formControlName='room_number'>
+    <br>
+    
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label" for="">Số sinh viên:</label>
+    <input class="form-control" type="number" formControlName='total_students'>
+    <br>
+    
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label" for="">GVCN:</label>
+    <input class="form-control" type="text" formControlName='main_teacher'>
+    <br>
+  </div>
+
+  <button class="btn btn-primary" (click)="saveClass()">Save</button>&nbsp;
+  <button class="btn btn-secondary" (click)="formClass.reset()">New</button>
+</form>
+</div>
+<hr>
